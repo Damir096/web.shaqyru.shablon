@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=400, user-scalable=no">
+    <title>Приглашение на свадьбу</title>
+    <!-- Подключаем шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Great+Vibes&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="desktop-wrapper">
+        <div class="mobile-canvas">
+            <!-- Основной контент -->
+            <main class="main-content">
+
+                <!-- Секция 1: Hero -->
+                <section class="section-1-hero">
+                    <!-- Переключатель языка -->
+                    <div class="lang-switcher">
+                        <a href="index.html" class="lang-btn active">RU</a>
+                        <span class="lang-sep">|</span>
+                        <a href="index-kz.html" class="lang-btn">KZ</a>
+                    </div>
+
+                    <div class="hero-top-text hero-entrance">
+                        <p class="invite-title-top" id="invite-title-top"></p>
+                        <p class="invite-title-bottom" id="invite-title-bottom"></p>
+                    </div>
+
+                    <img src="" alt="Главное фото" class="hero-main-img hero-entrance hero-entrance-delay-1"
+                        id="hero-main-img">
+
+                    <!-- Плеер сердце с крутящейся надписью -->
+                    <div class="couple-names-row hero-entrance hero-entrance-delay-2">
+                        <span class="couple-name-left" id="couple-name-left">&#1044;&#1072;&#1084;&#1080;&#1088;</span>
+
+                        <!-- [центр] Сердце-плеер с крутящейся надписью -->
+                        <div class="heart-player-wrap">
+                            <!-- Крутящаяся надпись -->
+                            <svg class="heart-ring-text" viewBox="0 0 110 110" width="110" height="110">
+                                <defs>
+                                    <path id="heart-ring-path" d="M55,55 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0">
+                                    </path>
+                                </defs>
+                                <text font-size="8" font-family="Inter,sans-serif" font-weight="700"
+                                    letter-spacing="1.5">
+                                    <textPath href="#heart-ring-path" startOffset="0">
+                                        НАЖМИ СЕРДЕЧКУ ♥ НАЖМИ СЕРДЕЧКУ ♥ НАЖМИ СЕРДЕЧКУ ♥
+                                    </textPath>
+                                </text>
+                            </svg>
+                            <!-- Кнопка -->
+                            <button id="music-btn" class="heart-play-btn" aria-label="Воспроизвести музыку">
+                                <svg class="icon-heart" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                </svg>
+                                <svg class="icon-music" viewBox="0 0 24 24" fill="currentColor" style="display:none">
+                                    <path
+                                        d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
+                                </svg>
+                            </button>
+                            <audio id="bg-music" loop>
+                                <source src="ZHugunusovMiras.mp3" type="audio/mpeg">
+                            </audio>
+                        </div>
+
+                        <span class="couple-name-right"
+                            id="couple-name-right">&#1040;&#1088;&#1091;&#1078;&#1072;&#1085;</span>
+                    </div>
+
+                    <div class="hero-info-row hero-entrance hero-entrance-delay-3">
+                        <div class="info-col-left">
+                            <span class="info-month" id="info-month"></span>
+                            <span class="info-day" id="info-day"></span>
+                            <span class="info-year" id="info-year"></span>
+                        </div>
+                        <div class="info-col-center">
+                            <span class="venue-title" id="venue-title"></span>
+                            <span class="venue-subtitle" id="venue-subtitle"></span>
+                        </div>
+                        <div class="info-col-right">
+                            <span class="time-label-top" id="time-label-top"></span>
+                            <span class="time-big" id="time-big"></span>
+                            <span class="time-bottom" id="time-bottom"></span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Секция 2: Обращение -->
+                <section class="section-2-greeting">
+                    <svg class="decor-wave-top" viewBox="0 0 400 41" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none">
+                        <path d="M0 20.5C100 -6.83333 300 47.8333 400 20.5V0H0V20.5Z" fill="#F7F4E9" />
+                    </svg>
+
+                    <div class="greeting-content stagger">
+                        <h2 class="greeting-title" id="greeting-title"></h2>
+                        <p class="greeting-text" id="greeting-text-1"></p>
+                        <p class="greeting-text focus-script" id="greeting-text-2"></p>
+                        <p class="greeting-text" id="greeting-text-3"></p>
+                        <p class="greeting-text" id="greeting-text-4"></p>
+                        <p class="greeting-signature" id="signature"></p>
+                    </div>
+
+                    <!-- Декоративный разделитель: лоза с листьями -->
+                    <svg class="flourish-img" viewBox="0 0 360 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Центральные кольца -->
+                        <circle cx="180" cy="21" r="9" stroke="#6b6b6b" stroke-width="1.2" fill="none" />
+                        <circle cx="180" cy="21" r="5" stroke="#6b6b6b" stroke-width="1" fill="none" />
+                        <!-- Лоза влево от центра -->
+                        <path
+                            d="M171 21 C155 21 148 12 132 14 C116 16 108 24 92 22 C76 20 68 12 52 14 C36 16 28 24 12 22"
+                            stroke="#6b6b6b" stroke-width="1.2" fill="none" stroke-linecap="round" />
+                        <!-- Лоза вправо от центра -->
+                        <path
+                            d="M189 21 C205 21 212 12 228 14 C244 16 252 24 268 22 C284 20 292 12 308 14 C324 16 332 24 348 22"
+                            stroke="#6b6b6b" stroke-width="1.2" fill="none" stroke-linecap="round" />
+                        <!-- Листья левой стороны -->
+                        <ellipse cx="142" cy="11" rx="6" ry="3.5" fill="#6b6b6b" transform="rotate(-25 142 11)"
+                            opacity="0.75" />
+                        <ellipse cx="100" cy="13" rx="6" ry="3.5" fill="#6b6b6b" transform="rotate(20 100 13)"
+                            opacity="0.75" />
+                        <ellipse cx="58" cy="11" rx="6" ry="3.5" fill="#6b6b6b" transform="rotate(-25 58 11)"
+                            opacity="0.75" />
+                        <ellipse cx="162" cy="27" rx="5" ry="3" fill="#6b6b6b" transform="rotate(15 162 27)"
+                            opacity="0.65" />
+                        <ellipse cx="120" cy="29" rx="5" ry="3" fill="#6b6b6b" transform="rotate(-20 120 29)"
+                            opacity="0.65" />
+                        <ellipse cx="78" cy="28" rx="5" ry="3" fill="#6b6b6b" transform="rotate(15 78 28)"
+                            opacity="0.65" />
+                        <!-- Листья правой стороны -->
+                        <ellipse cx="218" cy="11" rx="6" ry="3.5" fill="#6b6b6b" transform="rotate(25 218 11)"
+                            opacity="0.75" />
+                        <ellipse cx="260" cy="13" rx="6" ry="3.5" fill="#6b6b6b" transform="rotate(-20 260 13)"
+                            opacity="0.75" />
+                        <ellipse cx="302" cy="11" rx="6" ry="3.5" fill="#6b6b6b" transform="rotate(25 302 11)"
+                            opacity="0.75" />
+                        <ellipse cx="198" cy="27" rx="5" ry="3" fill="#6b6b6b" transform="rotate(-15 198 27)"
+                            opacity="0.65" />
+                        <ellipse cx="240" cy="29" rx="5" ry="3" fill="#6b6b6b" transform="rotate(20 240 29)"
+                            opacity="0.65" />
+                        <ellipse cx="282" cy="28" rx="5" ry="3" fill="#6b6b6b" transform="rotate(-15 282 28)"
+                            opacity="0.65" />
+                        <!-- Маленькие усики -->
+                        <path d="M130 18 Q134 12 138 10" stroke="#6b6b6b" stroke-width="0.8" fill="none"
+                            stroke-linecap="round" />
+                        <path d="M88 20 Q92 14 96 12" stroke="#6b6b6b" stroke-width="0.8" fill="none"
+                            stroke-linecap="round" />
+                        <path d="M230 18 Q226 12 222 10" stroke="#6b6b6b" stroke-width="0.8" fill="none"
+                            stroke-linecap="round" />
+                        <path d="M272 20 Q268 14 264 12" stroke="#6b6b6b" stroke-width="0.8" fill="none"
+                            stroke-linecap="round" />
+                    </svg>
+
+                    <svg class="decor-wave-bottom" viewBox="0 0 400 28" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none">
+                        <path d="M0 14C100 32.6667 300 -4.66667 400 14V28H0V14Z" fill="#F7F4E9" />
+                    </svg>
+                </section>
+
+                <!-- Секция 3: Фото + таймер + календарь -->
+                <section class="section-3-countdown">
+                    <img src="" alt="Второе фото" class="hero-second-img img-reveal" id="hero-secondary-img">
+
+                    <h2 class="countdown-title reveal">до Свадьбы осталось:</h2>
+
+                    <div class="countdown-timer">
+                        <div class="timer-col">
+                            <span class="timer-val" id="timer-days">00</span>
+                            <span class="timer-label">дней</span>
+                        </div>
+                        <div class="timer-col">
+                            <span class="timer-val" id="timer-hours">00</span>
+                            <span class="timer-label">часов</span>
+                        </div>
+                        <div class="timer-col">
+                            <span class="timer-val" id="timer-minutes">00</span>
+                            <span class="timer-label">минут</span>
+                        </div>
+                        <div class="timer-col">
+                            <span class="timer-val" id="timer-seconds">00</span>
+                            <span class="timer-label">секунд</span>
+                        </div>
+                    </div>
+
+                    <div class="event-date-block">
+                        <div class="event-month" id="event-month-cal"></div>
+                        <div class="event-day-big" id="event-day-cal"></div>
+                        <div class="event-date-row">
+                            <span class="event-weekday" id="event-weekday-cal"></span>
+                            <span class="event-time" id="event-time-cal"></span>
+                        </div>
+                        <div class="event-year" id="event-year-cal"></div>
+                    </div>
+
+                    <div class="calendar-wrapper">
+                        <div class="calendar-header">
+                            <div>Пн</div>
+                            <div>Вт</div>
+                            <div>Ср</div>
+                            <div>Чт</div>
+                            <div>Пт</div>
+                            <div>Сб</div>
+                            <div>Вс</div>
+                        </div>
+                        <div class="calendar-grid" id="calendar-grid">
+                            <!-- JS will generate calendar -->
+                        </div>
+                    </div>
+
+                    <svg class="decor-wave-bottom-cal" viewBox="0 0 400 54" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                        <path d="M0 27C100 63 300 -9 400 27V54H0V27Z" fill="#FFFFFF" />
+                    </svg>
+                </section>
+
+                <!-- Секция 4: Адрес -->
+                <section class="section-4-address reveal">
+                    <h2 class="address-title" id="address-title"></h2>
+                    <p class="address-text" id="city-line"></p>
+                    <p class="address-text" id="venue-type-line"></p>
+                    <p class="address-venue" id="venue-line"></p>
+
+                    <div class="map-links">
+                        <img src="" alt="Стрелка" class="map-arrow" id="map-arrow-img">
+                        <img src="" alt="Карта" class="map-icon" id="map-icon-img">
+                    </div>
+                </section>
+
+                <!-- Секция 5: Дресс-код -->
+                <section class="section-5-dresscode">
+                    <svg class="decor-wave-top" viewBox="0 0 400 31" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none">
+                        <path d="M0 15.5C100 -5.16667 300 36.1667 400 15.5V0H0V15.5Z" fill="#FFFFFF" />
+                    </svg>
+
+                    <!-- Маленький декоративный завиток (SVG) -->
+                    <svg class="small-vine-img" viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M40 50 C40 45 35 38 40 30 C45 22 40 15 40 10" stroke="#6b6b6b" stroke-width="1.2"
+                            fill="none" stroke-linecap="round" />
+                        <path d="M40 35 C34 32 28 34 26 30" stroke="#6b6b6b" stroke-width="1" fill="none"
+                            stroke-linecap="round" />
+                        <path d="M40 28 C46 25 52 27 54 23" stroke="#6b6b6b" stroke-width="1" fill="none"
+                            stroke-linecap="round" />
+                        <ellipse cx="24" cy="28" rx="5" ry="3" fill="#6b6b6b" transform="rotate(20 24 28)"
+                            opacity="0.7" />
+                        <ellipse cx="56" cy="21" rx="5" ry="3" fill="#6b6b6b" transform="rotate(-20 56 21)"
+                            opacity="0.7" />
+                        <path d="M38 22 C32 18 30 10 34 7" stroke="#6b6b6b" stroke-width="1" fill="none"
+                            stroke-linecap="round" />
+                        <ellipse cx="32" cy="7" rx="4.5" ry="2.5" fill="#6b6b6b" transform="rotate(-30 32 7)"
+                            opacity="0.7" />
+                    </svg>
+
+                    <h2 class="dresscode-title" id="dresscode-title"></h2>
+
+                    <!-- Палитра цветов свадьбы -->
+                    <div class="color-palette">
+                        <div class="color-swatch" style="background:#D6CCBC;"></div>
+                        <div class="color-swatch" style="background:#B08070;"></div>
+                        <div class="color-swatch" style="background:#5E3A2C;"></div>
+                        <div class="color-swatch" style="background:#8A9E7A;"></div>
+                    </div>
+
+                    <!-- Иллюстрация: минималистичный эскиз костюм + платье -->
+                    <img src="dresscode_minimal_sketch_1772979155107.png" alt="Дресс-код"
+                        class="dresscode-main-img img-reveal" id="dresscode-img">
+
+                    <p class="dresscode-text" id="dresscode-text"></p>
+
+                    <img src="assets/flourish-2.png" alt="Декор" class="flourish-img-2" id="flourish-2-img">
+
+                    <svg class="decor-wave-bottom" viewBox="0 0 400 36" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        preserveAspectRatio="none">
+                        <path d="M0 18C100 42 300 -6 400 18V36H0V18Z" fill="#FFFFFF" />
+                    </svg>
+                </section>
+
+                <!-- Секция 6: Анкета -->
+                <section class="section-6-rsvp reveal">
+                    <h2 class="form-title" id="form-title"></h2>
+                    <p class="form-subtitle" id="form-subtitle"></p>
+
+                    <form class="rsvp-form" id="rsvp-form">
+                        <label class="form-label">Имя Фамилия</label>
+                        <input type="text" class="form-input" placeholder="Ваши Имя и Фамилия" required>
+
+                        <label class="form-label mt-radio">Сможете прийти?</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="attendance" value="yes" checked>
+                                <span class="custom-radio"></span>
+                                Приду
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="attendance" value="no">
+                                <span class="custom-radio"></span>
+                                Не смогу
+                            </label>
+                        </div>
+
+                        <!-- Скрытые поля для Google Sheets -->
+                        <div style="display: none;">
+                            <textarea name="wishes" placeholder="Ваше пожелание"></textarea>
+                            <select name="persons_count">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="submit-btn" id="submit-btn">Отправить</button>
+                    </form>
+                </section>
+
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
