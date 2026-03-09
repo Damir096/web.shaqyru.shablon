@@ -187,6 +187,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // =====================
+    // DRESSCODE COLOR PICKER
+    // =====================
+    const colorSwatches = document.querySelectorAll('.color-swatch');
+    const dresscodeOverlay = document.getElementById('dresscode-overlay');
+    const dressFills = document.querySelectorAll('.dresscode-fill');
+
+    if (colorSwatches.length > 0) {
+        colorSwatches.forEach(swatch => {
+            swatch.addEventListener('click', () => {
+                const color = swatch.style.backgroundColor;
+                dressFills.forEach(el => {
+                    el.style.fill = color;
+                    el.style.transition = 'fill 0.4s ease';
+                });
+                if (dresscodeOverlay) dresscodeOverlay.style.backgroundColor = color;
+            });
+        });
+    }
+    // =====================
     // SCROLL REVEAL ANIMATIONS
     // =====================
     const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .img-reveal, .color-palette, .greeting-content');
