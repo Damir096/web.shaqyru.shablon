@@ -829,18 +829,20 @@ svg {
 .submit-btn {
     display: block;
     margin: 30px auto 0;
-    width: 153px;
+    width: 200px;
     height: 51px;
-    background-color: var(--bg-white);
-    border: 1px solid var(--text-black);
+    background-color: #5E3A2C;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
     font-family: var(--font-cormorant);
-    font-size: 21px;
+    font-size: 20px;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s;
 }
 
 .submit-btn:hover {
-    background-color: var(--bg-main);
+    background-color: #4A2E23;
 }
 
 /* ===================== */
