@@ -839,11 +839,33 @@ svg {
     font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
+    /* Убираем дефолтные стили кнопок в Safari/iOS */
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .submit-btn:hover {
     background-color: #4A2E23;
 }
+
+/* Form inputs */
+.form-input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 4px;
+    font-family: var(--font-inter);
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+    /* Убираем дефолтные стили inputs в Safari/iOS */
+    -webkit-appearance: none;
+    appearance: none;
+}
+
 
 /* ===================== */
 /* SCROLL REVEAL ANIMATIONS */
